@@ -1,0 +1,6 @@
+<form action="{% url 'demoapp:login' %}" method="POST"> #the code in the action is for dynamic mapping
+    {% csrf_token %}
+    <p>User Name: <input type="text" name="username"></p> 
+    <p>Password : <input type="password" name="password"></p> 
+    <input type="submit"> 
+</form>
