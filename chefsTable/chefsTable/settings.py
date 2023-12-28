@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'demoapp',
+    'demoapp.apps.DemoappConfig',
     'newapp.apps.NewappConfig',
 ]
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'chefsTable.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +68,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = 'demoapp/static',
 
 WSGI_APPLICATION = 'chefsTable.wsgi.application'
 
