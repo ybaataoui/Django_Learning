@@ -1,11 +1,18 @@
-<html>
+{% extends 'base.html' %}
+
+{% block content %}
+<p>Home</p>
+<p>This is the home page for Little Lemon</p>
+{% endblock %}
+<!-- <html>
 <body>
     <form action="" method="POST" style="background-color: bisque;">
-        {% csrf_token %} <!--tell django that the data is save -->
+        {% csrf_token %} tell django that the data is save 
         
-            {{form.as_p}} <!-- Pass the form I created -->
+            {{form.as_p}}  Pass the form I created 
 
         <input type="submit" value="Submit">
     </form>
 </body>
-<html>
+<html> -->
+

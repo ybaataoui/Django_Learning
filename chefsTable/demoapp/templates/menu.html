@@ -1,27 +1,21 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+{% block content %}
+
     <!-- Add heading code -->
     <h1 style="color: #495E57">Menu</h1>
 
     <!-- Add paragraph code -->
-    <table style="border: 1px solid black;">
-        {% for item in mains %}
-        <tr>
-            <td style="border: 1px solid black;">{{item.name}}</td>
-            <td style="border: 1px solid black;">{{item.price}}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    {% if menu %}
+    {% for item in menu %}
+    <p>{{ item.name}} : {{ item.price }}</p>
+    {% endfor %}
+    {% else %}
+    <p>No item to Display</p>
+    {% endif %}
 
     <!-- Add image code -->
     <img src="{% static 'img/dessert.jpg' %}" alt="">
-    
-</body>
-</html>
+
+{% endblock %}
